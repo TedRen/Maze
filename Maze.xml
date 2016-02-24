@@ -8,7 +8,7 @@
     </value>
     <statement name="DO">
       <block type="controls_if" id="129" inline="false">
-        <mutation elseif="1"></mutation>
+        <mutation elseif="2"></mutation>
         <value name="IF0">
           <block type="logic_compare" id="177" inline="true">
             <field name="OP">GT</field>
@@ -33,9 +33,6 @@
                     <field name="NUM">2000</field>
                   </block>
                 </value>
-                <next>
-                  <block type="movement_forward" id="360"></block>
-                </next>
               </block>
             </next>
           </block>
@@ -56,7 +53,7 @@
           </block>
         </value>
         <statement name="DO1">
-          <block type="movement_left" id="170">
+          <block type="movement_forward" id="284">
             <next>
               <block type="robot_delay" id="341" inline="true">
                 <value name="DELAY">
@@ -64,9 +61,34 @@
                     <field name="NUM">2000</field>
                   </block>
                 </value>
-                <next>
-                  <block type="movement_forward" id="284"></block>
-                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="logic_compare" id="382" inline="true">
+            <field name="OP">GT</field>
+            <value name="A">
+              <block type="sensor_object" id="383">
+                <field name="OBJECT">RIGHTFRONT</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="384">
+                <field name="NUM">50</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="movement_left" id="400">
+            <next>
+              <block type="robot_delay" id="401" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="402">
+                    <field name="NUM">2000</field>
+                  </block>
+                </value>
               </block>
             </next>
           </block>
