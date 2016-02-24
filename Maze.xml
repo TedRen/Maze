@@ -51,13 +51,13 @@
                     <field name="NUM">2000</field>
                   </block>
                 </value>
+                <next>
+                  <block type="movement_forward" id="284"></block>
+                </next>
               </block>
             </next>
           </block>
         </statement>
-        <next>
-          <block type="movement_forward" id="284"></block>
-        </next>
       </block>
     </statement>
     <next>
